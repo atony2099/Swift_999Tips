@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="protocol_oriented" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TzY-fk-n4v">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WNk-2h-i9B"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="grK-DZ-Kzy"/>
+                                </connections>
+                            </tableView>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lz8-e2-1bK" customClass="CustomView" customModule="protocol_oriented" customModuleProvider="target">
+                                <rect key="frame" x="50" y="0.0" width="275" height="141"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.10980392160000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="44u-pH-uNV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TzY-fk-n4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1CO-ko-y5Z"/>
+                            <constraint firstItem="lz8-e2-1bK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N6q-2W-rDE"/>
+                            <constraint firstItem="TzY-fk-n4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UPb-aI-TzW"/>
+                            <constraint firstItem="lz8-e2-1bK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cqW-VD-Pu9"/>
+                            <constraint firstItem="TzY-fk-n4v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lsh-FM-C4k"/>
+                            <constraint firstItem="TzY-fk-n4v" firstAttribute="top" secondItem="lz8-e2-1bK" secondAttribute="bottom" id="wY1-B3-GYu"/>
+                            <constraint firstItem="lz8-e2-1bK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="xuK-8P-bT5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customView" destination="lz8-e2-1bK" id="aN9-Mh-cYy"/>
+                        <outlet property="tableView" destination="TzY-fk-n4v" id="qAU-st-iTv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="45.42728635682159"/>
+        </scene>
+    </scenes>
+</document>
